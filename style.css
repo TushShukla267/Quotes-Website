@@ -71,3 +71,68 @@ body {
   font-size: 40px;
   margin: 0 10px;
 }
+
+/* Animation for main container */
+.Card-component  {
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Animation for nav items */
+.text-heading,
+.para{
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Animation for search bar */
+.Search-bar {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.Search-btn{
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Animation for info containers */
+.CityName,
+.Temperature-container,
+.Date,
+.info-box {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Delay each animation */
+.text-heading {
+  animation-delay: 0.2s;
+}
+
+.para {
+  animation-delay: 0.5s;
+}
+
+.Search-bar {
+  animation-delay: 0.8s;
+}
+
+.Search-btn {
+  animation-delay: 1.2s;
+}
+
+/* Keyframes for fadeInUp animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
