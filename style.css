@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong");
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(0, 0, 0) 2%,
+    rgb(255, 0, 0) 5%,
+    rgb(255, 255, 255) 15%,
+    rgb(255, 217, 0) 80%,
+    rgb(255, 0, 0) 90%,
+    rgb(0, 0, 0) 98%
+  );
+}
+
+.text-heading {
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+  font-family: cursive;
+}
+
+.para {
+  font-size: 18px;
+  font-family: "Audiowide", sans-serif;
+}
+
+.para:hover {
+  cursor: pointer;
+  background-color: blue;
+  border: 2px solid black;
+  border-radius: 2px;
+}
+
+::placeholder {
+  font-family: "Audiowide", sans-serif;
+  font-size: smaller;
+}
+
+.Card-component {
+  display: flex;
+  justify-content: center;
+}
+
+.Card {
+  width: 1000px;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(100px);
+  border: 5px solid rgba(128, 0, 128, 0.781);
+}
+
+.Qoutes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote-mark {
+  font-size: 24px;
+}
+
+.quote-text {
+  font-size: 40px;
+  margin: 0 10px;
+}

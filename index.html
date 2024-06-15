@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>DailyQuotes!</title>
+  </head>
+  <body>
+    <!-- Image and text -->
+    <nav class="navbar navbar-light bg-dark">
+      <div class="d-flex justify-content-start">
+        <img
+          src="Qouteslogo.jpeg"
+          width="70"
+          height="70"
+          class="d-inline-block align-top rounded-lg"
+          alt=""
+        />
+        &nbsp;&nbsp;
+        <div class="text-heading"><p class="text-light">DailyQuotes</p></div>
+      </div>
+      <div class="d-flex justify-content-end">
+        <div class="d-flex flex-row text-light">
+          <div class="para" id="Random"><div class="p-2">Random</div></div>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="para" data-category="money"><div class="p-2">money</div></div>
+          &nbsp;&nbsp;
+          <div class="para" data-category="happiness"><div class="p-2">happiness</div></div>
+          &nbsp;&nbsp;
+          <div class="para" data-category="success"><div class="p-2">success</div></div>
+          &nbsp;&nbsp;
+        </div>
+        &nbsp;&nbsp;
+        <form class="form-inline">
+          <input
+            class="form-control mr-sm-2"
+            id="search"
+            type="search"
+            placeholder="Please Search for category Ex:beauty"
+            aria-label="Search"
+            size="38"
+          />
+          &nbsp;&nbsp;
+          <button class="btn btn-outline-success my-2 my-sm-0" id="searchbtn" type="button">
+            Search
+          </button>
+        </form>
+      </div>
+    </nav>
+
+    <br><br><br><br>
+
+    <div class="Card-component">
+      <div class="Card">
+        <div class="text-center">
+          <div class="card-header">
+            Quotes on 
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">
+              <div class="Qoutes">
+                <div class="quote-text" id="Quote">Hi ,Select any Category you wnat to see Qoutes of</div>
+              </div>
+            </h5>
+            <p class="card-text">-</p>
+            <button class="btn btn-primary" id="btn">Next Quote</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
