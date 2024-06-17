@@ -9,13 +9,19 @@ body {
   background-size: cover;
   background-image: linear-gradient(
     to bottom right,
-    rgb(0, 0, 0) 2%,
-    rgb(255, 0, 0) 5%,
-    rgb(255, 255, 255) 15%,
-    rgb(255, 217, 0) 80%,
-    rgb(255, 0, 0) 90%,
-    rgb(0, 0, 0) 98%
-  );
+    #ad36cb 2%,
+    #ff00ff 15%,
+    white 32.23%,
+    #ffd900 67.37%,
+    #ff00ff 80%,
+    #ad36cb 90%,
+    #000000 98%
+);
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+    0px 4px 4px 0px rgba(255, 250, 250, 0.25),
+    0px 4px 4px 0px rgba(253, 245, 245, 0.25);
+
+
 }
 
 .text-heading {
@@ -42,7 +48,7 @@ body {
   font-size: smaller;
 }
 
-#alert{
+#alert {
   margin: auto;
   height: 75px;
 }
@@ -72,19 +78,19 @@ body {
   font-size: 24px;
 }
 
-.quote-text {
+.Facts-text {
   font-size: 40px;
   margin: 0 10px;
 }
 
 /* Animation for main container */
-.Card-component  {
+.Card-component {
   animation: fadeInUp 1s ease-out;
 }
 
 /* Animation for nav items */
 .text-heading,
-.para{
+.para {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 1s ease-out forwards;
@@ -97,7 +103,7 @@ body {
   animation: fadeInUp 1s ease-out forwards;
 }
 
-.Search-btn{
+.Search-btn {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 1s ease-out forwards;

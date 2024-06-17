@@ -80,7 +80,13 @@ function NextQuote(category) {
   Quotes(category);
 }
 
-// Initial text setup
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector(".quote-text").innerText = "Hi, Select any Category you want to see Quotes of";
+  window.setTimeout(() => {
+    document.getElementById('alert').innerHTML = "<div class='alert alert-success d-flex justify-content-center align-items-center' role='alert' style='margin: 0 auto; height: 75px; padding: 0 15px; text-align: center;'>Search Quotes of whichever Category you want!</div>";
+}, 1400);
+
+  window.setTimeout(()=>{
+    document.getElementById('alert').innerHTML = "";
+  }, 5000)
 });
