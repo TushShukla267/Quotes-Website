@@ -22,8 +22,8 @@
   </head>
   <body>
     <!-- Image and text -->
-    <nav class="navbar navbar-light bg-dark">
-      <div class="d-flex justify-content-start">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <div class="navbar-brand">
         <img
           src="Qouteslogo.jpeg"
           width="70"
@@ -31,24 +31,36 @@
           class="d-inline-block align-top rounded-lg"
           alt=""
         />
-        &nbsp;&nbsp;
-        <div class="text-heading"><p class="text-light">DailyQuotes</p></div>
+        <span class="text-light">DailyQuotes</span>
       </div>
-      <div class="d-flex justify-content-end">
-        <div class="d-flex flex-row text-light">
-          <div class="para" id="Random"><div class="p-2">Random</div></div>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <div class="para" data-category="money"><div class="p-2">money</div></div>
-          &nbsp;&nbsp;
-          <div class="para" data-category="happiness"><div class="p-2">happiness</div></div>
-          &nbsp;&nbsp;
-          <div class="para" data-category="success"><div class="p-2">success</div></div>
-          &nbsp;&nbsp;
-        </div>
-        &nbsp;&nbsp;
-        <form class="form-inline">
-          <div class="Search-bar">
-            <input
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link text-light para" id="Random" href="#">Random</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light para" data-category="money" href="#">Money</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light para" data-category="happiness" href="#">Happiness</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light para" data-category="success" href="#">Success</a>
+          </li>
+        </ul>
+        <form class="form-inline ml-3 my-2 my-lg-0">
+          <input
             class="form-control mr-sm-2"
             id="search"
             type="search"
@@ -56,23 +68,18 @@
             aria-label="Search"
             size="38"
           />
-          </div>
-          &nbsp;
-          <div class="Search-btn">
-            <button class="btn btn-outline-success my-2 my-sm-0" id="searchbtn" type="button">
-              Search
-            </button>
-          </div>
+          <button class="btn btn-outline-success my-2 my-sm-0" id="searchbtn" type="button">
+            Search
+          </button>
         </form>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="index1.html"><button type="button" class="btn btn-outline-warning"> 
-          DailyFacts</button></a>
+        <a href="index1.html" class="ml-3">
+          <button type="button" class="btn btn-outline-warning">DailyFacts</button>
+        </a>
       </div>
     </nav>
 
     <div id="alert"></div>
     
-
     <br><br><br><br>
 
     <div class="Card-component">
@@ -84,7 +91,7 @@
           <div class="card-body">
             <h5 class="card-title">
               <div class="Qoutes">
-                <div class="quote-text" id="Quote">Hi ,Select any Category you wnat to see Qoutes of</div>
+                <div class="quote-text" id="Quote">Hi ,Select any Category you want to see Quotes of</div>
               </div>
             </h5>
             <p class="card-text">-</p>
@@ -94,7 +101,20 @@
       </div>
     </div>
 
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"  crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"  crossorigin="anonymous"></script>
     <script src="script.js"></script>
   </body>
 </html>
+
+
+
+<!-- changes to do to make this website responsive  -->
+
+<!-- Navbar Classes: Changed navbar navbar-light bg-dark to navbar navbar-expand-lg navbar-light bg-dark to use Bootstrap's responsive navbar.
+Navbar Brand: Moved the logo and text inside a navbar-brand element for better alignment and responsiveness.
+Navbar Toggler: Added a button for toggling the navbar on smaller screens.
+Navbar Collapse: Wrapped the navbar links and form in a div with classes collapse navbar-collapse and added an id="navbarNav".
+Navbar Items: Converted the navbar items into a list with ul and li tags to leverage Bootstrap's navigation components.
+Form and Button: Moved the form and button inside the collapse navbar-collapse div for better responsiveness and alignment. -->
