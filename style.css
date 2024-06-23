@@ -52,6 +52,7 @@ body {
   justify-content: center;
 }
 
+/* Custom styles for better mobile experience */
 .Card {
   width: 1000px;
   background: rgba(255, 255, 255, 0);
@@ -60,6 +61,14 @@ body {
   backdrop-filter: blur(100px);
   -webkit-backdrop-filter: blur(100px);
   border: 5px solid rgba(128, 0, 128, 0.781);
+  overflow-y: auto; /* Enable vertical scrollbar when content overflows */
+  max-height: calc(100vh - 300px); /* Adjust max-height as needed */
+  border: 1px solid #ccc; /* Optional: Add border for clarity */
+  border-radius: 10px; /* Optional: Add border radius for aesthetics */
+}
+
+.card-body {
+  padding: 15px; /* Optional: Adjust padding for better spacing */
 }
 
 .Qoutes {
