@@ -3,10 +3,7 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!-- Bootstrap CSS -->
     <link
@@ -15,7 +12,6 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-
     <link rel="stylesheet" href="style.css" />
 
     <title>DailyQuotes!</title>
@@ -23,7 +19,7 @@
   <body>
     <!-- Image and text -->
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-      <div class="navbar-brand">
+      <div class="navbar-brand Heading">
         <img
           src="Qouteslogo.jpeg"
           width="70"
@@ -59,7 +55,7 @@
             <a class="nav-link text-light para" data-category="success" href="#">Success</a>
           </li>
         </ul>
-        <form class="form-inline ml-3 my-2 my-lg-0">
+        <form class="form-inline ml-3 my-2 my-lg-0 fade-in">
           <input
             class="form-control mr-sm-2"
             id="search"
@@ -72,9 +68,11 @@
             Search
           </button>
         </form>
-        <a href="index1.html" class="ml-3">
-          <button type="button" class="btn btn-outline-warning">DailyFacts</button>
-        </a>
+        <div class="facts-btn">
+          <a href="index1.html" class="ml-3">
+            <button type="button" class="btn btn-outline-warning">DailyFacts</button>
+          </a>
+        </div>
       </div>
     </nav>
 
@@ -85,37 +83,23 @@
     <div class="Card-component">
       <div class="Card">
         <div class="text-center">
-          <div class="card-header">
-            Quotes on 
-          </div>
+          <div class="card-header">Quotes on </div>
           <div class="card-body">
             <h5 class="card-title">
               <div class="Quotes">
                 <div class="quote-text" id="Quote">Hi ,Select any Category you want to see Quotes of</div>
               </div>
             </h5>
-            <p class="card-text">-</p>
+            <p class="card-text">- Author</p>
             <button class="btn btn-primary" id="btn">Next Quote</button>
           </div>
         </div>
       </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"  crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"  crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
   </body>
 </html>
-
-
-
-
-<!-- changes to do to make this website responsive  -->
-
-<!-- Navbar Classes: Changed navbar navbar-light bg-dark to navbar navbar-expand-lg navbar-light bg-dark to use Bootstrap's responsive navbar.
-Navbar Brand: Moved the logo and text inside a navbar-brand element for better alignment and responsiveness.
-Navbar Toggler: Added a button for toggling the navbar on smaller screens.
-Navbar Collapse: Wrapped the navbar links and form in a div with classes collapse navbar-collapse and added an id="navbarNav".
-Navbar Items: Converted the navbar items into a list with ul and li tags to leverage Bootstrap's navigation components.
-Form and Button: Moved the form and button inside the collapse navbar-collapse div for better responsiveness and alignment. -->

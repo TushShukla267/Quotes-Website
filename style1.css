@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong");
+
 html,
 body {
   height: 100%;
@@ -16,12 +17,10 @@ body {
     #ff00ff 80%,
     #ad36cb 90%,
     #000000 98%
-);
-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
-    0px 4px 4px 0px rgba(255, 250, 250, 0.25),
-    0px 4px 4px 0px rgba(253, 245, 245, 0.25);
-
-
+  );
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+              0px 4px 4px 0px rgba(255, 250, 250, 0.25),
+              0px 4px 4px 0px rgba(253, 245, 245, 0.25);
 }
 
 .text-heading {
@@ -29,11 +28,19 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
   font-weight: bold;
   color: #fff;
   font-family: cursive;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.2s;
 }
 
 .para {
   font-size: 18px;
   font-family: "Audiowide", sans-serif;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.4s;
 }
 
 .para:hover {
@@ -56,6 +63,7 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
 .Card-component {
   display: flex;
   justify-content: center;
+  animation: fadeInUp 1s ease-out;
 }
 
 .Card {
@@ -66,85 +74,44 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
   backdrop-filter: blur(100px);
   -webkit-backdrop-filter: blur(100px);
   border: 5px solid rgba(128, 0, 128, 0.781);
-  overflow-y: auto; /* Enable vertical scrollbar when content overflows */
-  max-height: calc(100vh - 300px); /* Adjust max-height as needed */
-  border: 1px solid #ccc; /* Optional: Add border for clarity */
-  border-radius: 10px; /* Optional: Add border radius for aesthetics */
+  overflow-y: auto;
+  max-height: calc(100vh - 300px);
+  border: 1px solid #ccc;
+  border-radius: 10px;
 }
 
 .card-body {
-  padding: 15px; /* Optional: Adjust padding for better spacing */
-}
-
-.Qoutes {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.quote-mark {
-  font-size: 24px;
+  padding: 15px;
 }
 
 .Facts-text {
-  font-size: 40px;
+  font-size: 30px;
   margin: 0 10px;
+  overflow: hidden;
+  white-space: normal;
+  border-right: 4px solid;
+  animation: typing 2s steps(40, end), blink-caret 1s step-end infinite;
 }
 
-/* Animation for main container */
-.Card-component {
-  animation: fadeInUp 1s ease-out;
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
-/* Animation for nav items */
-.text-heading,
-.para {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s ease-out forwards;
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
 }
 
-/* Animation for search bar */
-.Search-bar {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s ease-out forwards;
-}
-
-.Search-btn {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s ease-out forwards;
-}
-
-/* Animation for info containers */
-.CityName,
-.Temperature-container,
-.Date,
-.info-box {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s ease-out forwards;
-}
-
-/* Delay each animation */
-.text-heading {
-  animation-delay: 0.2s;
-}
-
-.para {
-  animation-delay: 0.5s;
-}
-
-.Search-bar {
-  animation-delay: 0.8s;
-}
-
-.Search-btn {
-  animation-delay: 1.2s;
-}
-
-/* Keyframes for fadeInUp animation */
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -155,3 +122,21 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
     transform: translateY(0);
   }
 }
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .Card-component {
+    margin-top: 10px;
+  }
+
+  .Card {
+    width: 90%;
+    max-height: calc(100vh - 150px);
+  }
+
+  .Facts-text {
+    font-size: 20px;
+  }
+}
+
+
